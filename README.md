@@ -1,5 +1,8 @@
 # envsearch
 
+**Owned by Chatchawan Lakkhananukun.** Copyright © 2026 Chatchawan Lakkhananukun.
+See [the ownership notice](COPYRIGHT) for the scope of this attribution.
+
 Cited question-answering over public environmental regulations, in **English and Thai**:
 
 - **US EPA** hazardous-waste generator guidance (8 PDFs: satellite accumulation, generator categories, recordkeeping, empty containers, universal waste, characteristics, spills)
@@ -22,6 +25,9 @@ Sources:
 ---
 
 ## Quick start
+
+For the implementation history, design decisions and recorded verification results,
+see the [development journal](DEVELOPMENT_JOURNAL.md).
 
 For a free hosted browser demo and remote MCP URL, see [Deploy on Render](deploy/README.md).
 The deployment uses a separate public-only library and visitors' own chat API keys.

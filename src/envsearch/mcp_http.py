@@ -14,7 +14,7 @@ from pydantic import Field
 from anyio import CapacityLimiter, to_thread
 from starlette.responses import JSONResponse
 
-from . import mcp_server
+from . import mcp_server, OWNER_NOTICE
 
 
 def create_app(public_url: str = ''):
@@ -28,7 +28,7 @@ def create_app(public_url: str = ''):
         origins.append(f'https://{url.netloc}')
     server = FastMCP('envsearch-demo', stateless_http=True, json_response=True,
                      max_request_body_size=65536,
-                     instructions='Search this public reference library and cite document titles and pages. These documents may not reflect current law. No user uploads or paid answer tools are exposed.',
+                     instructions=OWNER_NOTICE + '. Search this public reference library and cite document titles and pages. These documents may not reflect current law. No user uploads or paid answer tools are exposed.',
                      transport_security=TransportSecuritySettings(allowed_hosts=hosts, allowed_origins=origins))
     annotations = ToolAnnotations(readOnlyHint=True, destructiveHint=False, idempotentHint=True, openWorldHint=False)
     retrieval_limit = CapacityLimiter(1)
@@ -68,7 +68,7 @@ def create_app(public_url: str = ''):
 
 def main():
     import uvicorn
-    parser = argparse.ArgumentParser(description=__doc__)
+    parser = argparse.ArgumentParser(description=__doc__, epilog=OWNER_NOTICE)
     parser.add_argument('--host', default='127.0.0.1')
     parser.add_argument('--port', type=int, default=int(os.environ.get('PORT', '8602')))
     parser.add_argument('--public-url', default=os.environ.get('ENVSEARCH_MCP_PUBLIC_URL', ''))

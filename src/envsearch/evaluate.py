@@ -32,6 +32,7 @@ from pathlib import Path
 
 import yaml
 
+from . import OWNER_NOTICE
 from .answer import answer as run_answer
 from .index import Index
 from .rewrite import expand_query
@@ -222,7 +223,7 @@ def write_report(result: dict, out_dir: Path) -> Path:
     out_dir.mkdir(parents=True, exist_ok=True)
     stamp = time.strftime("%Y%m%d-%H%M%S") + "-" + uuid.uuid4().hex[:8]
     (out_dir / f"eval-{stamp}.json").write_text(json.dumps(result, ensure_ascii=False, indent=1), encoding="utf-8")
-    md = [f"# Eval {stamp}", "", f"Config: `{json.dumps(result['config'])}`", "",
+    md = [f"# Eval {stamp}", "", OWNER_NOTICE, "", f"Config: `{json.dumps(result['config'])}`", "",
           "| slice | n | hit@k | MRR | doc recall@k | doc nDCG@k | correct | grounded | cite prec | false refusal | refusal ok |",
           "|---|---|---|---|---|---|---|---|---|---|---|"]
     for name, s in result["summary"].items():

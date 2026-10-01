@@ -16,6 +16,7 @@ from pathlib import Path
 
 import yaml
 
+from . import OWNER_NOTICE, COPYRIGHT_NOTICE
 from .config import REPO_ROOT, get_client, get_settings
 
 
@@ -159,7 +160,7 @@ def cmd_eval(a):
 
 def main(argv=None):
     s = get_settings()
-    p = argparse.ArgumentParser(prog="envsearch")
+    p = argparse.ArgumentParser(prog="envsearch", description=OWNER_NOTICE, epilog=COPYRIGHT_NOTICE)
     sub = p.add_subparsers(dest="cmd", required=True)
 
     f = sub.add_parser("fetch"); f.add_argument("--force", action="store_true"); f.set_defaults(fn=cmd_fetch)

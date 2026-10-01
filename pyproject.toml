@@ -5,6 +5,8 @@ build-backend = "setuptools.build_meta"
 [project]
 name = "envsearch"
 version = "0.1.0"
+authors = [{name = "Chatchawan Lakkhananukun"}]
+maintainers = [{name = "Chatchawan Lakkhananukun"}]
 description = "Cited Q&A over public environmental regulations (US EPA + Thai DIW/PCD), with an eval set and an MCP server for Claude Desktop."
 readme = "README.md"
 requires-python = ">=3.10"

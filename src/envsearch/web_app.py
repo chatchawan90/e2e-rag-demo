@@ -13,6 +13,7 @@ import streamlit as st
 from dotenv import load_dotenv
 from filelock import FileLock
 
+from envsearch import __owner__, OWNER_NOTICE, COPYRIGHT_NOTICE
 from envsearch.answer import Citation
 from envsearch.chat import stream_answer, answer as chat_answer
 from envsearch.config import REPO_ROOT, get_settings
@@ -22,7 +23,7 @@ from envsearch.rewrite import expand_query
 from envsearch.scope import route_question
 from envsearch.web_panels import evaluation_panel, gold_panel, monitoring_panel, mcp_panel, monitor
 
-st.set_page_config(page_title="Envsearch · Document chat", page_icon="📑", layout="wide")
+st.set_page_config(page_title=f"Envsearch · {__owner__}", page_icon="📑", layout="wide")
 public_demo = os.environ.get("ENVSEARCH_PUBLIC_DEMO") == "1"
 if not public_demo:
     load_dotenv(REPO_ROOT / ".env")
@@ -97,6 +98,7 @@ st.session_state.setdefault("messages", [])
 with st.sidebar:
     st.title("Envsearch")
     st.caption("Environmental regulations, with sources.")
+    st.caption(OWNER_NOTICE)
     st.divider()
     st.write(f"**{len({c.doc_id for c in idx.chunks})} documents** · {len(idx.chunks)} passages")
     st.caption("Hybrid search is ready" if idx.vectors else "Keyword search is ready")
@@ -163,6 +165,7 @@ def client_factory():
     return anthropic.Anthropic(api_key=api_key, timeout=90, max_retries=1)
 
 st.title("Ask your documents")
+st.caption(OWNER_NOTICE)
 st.caption("Ask in English or Thai. Follow the citations back to the page.")
 st.caption("Both conversation modes are limited to environmental regulations and compliance. Unrelated questions are declined before document search.")
 if public_demo:
@@ -323,3 +326,6 @@ with monitor_tab:
         monitoring_panel(settings)
 with tools_tab:
     mcp_panel(settings)
+
+st.divider()
+st.caption(f"{COPYRIGHT_NOTICE} · Envsearch application. Reference documents, models and dependencies retain their original attribution.")

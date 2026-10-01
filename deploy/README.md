@@ -1,5 +1,8 @@
 # Free browser + MCP demo on Render
 
+**Envsearch is owned by Chatchawan Lakkhananukun.**
+Copyright © 2026 Chatchawan Lakkhananukun. See [the ownership notice](../COPYRIGHT).
+
 This deploys independently of your computer. One container serves the browser at `/`
 and a real Streamable HTTP MCP server at `/mcp`. It runs on Render's **Free** plan.
 

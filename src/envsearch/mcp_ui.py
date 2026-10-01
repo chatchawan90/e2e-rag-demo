@@ -6,6 +6,8 @@ import sys
 
 import streamlit as st
 
+from envsearch import OWNER_NOTICE
+
 
 def mcp_panel(settings):
     if os.environ.get("ENVSEARCH_PUBLIC_DEMO") == "1":
@@ -16,6 +18,7 @@ def mcp_panel(settings):
                                          "env": {"ENVSEARCH_HOME": home}}}}
     config_json = json.dumps(config, indent=2)
     st.subheader("Connect another assistant to your document library")
+    st.caption(OWNER_NOTICE)
     st.markdown("""<style>
     .st-key-mcp_overview {border-top: 4px solid #2459A6; background: rgba(36,89,166,0.04);}
     .st-key-mcp_prepare, .st-key-mcp_connect {border-top: 4px solid #52677F;}
@@ -120,6 +123,7 @@ def mcp_panel(settings):
 def public_mcp_panel():
     base = os.environ.get("ENVSEARCH_MCP_PUBLIC_URL", "").rstrip("/")
     st.subheader("Connect to this demo through MCP")
+    st.caption(OWNER_NOTICE)
     with st.container(border=True):
         st.write("Use these same public documents from an MCP-compatible assistant. The server offers search, document listing and passage lookup; it does not call a paid answer API.")
         if base:

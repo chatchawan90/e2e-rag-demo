@@ -1,4 +1,8 @@
 FROM python:3.12-slim
+LABEL org.opencontainers.image.authors="Chatchawan Lakkhananukun" \
+      org.opencontainers.image.vendor="Chatchawan Lakkhananukun" \
+      org.opencontainers.image.title="Envsearch" \
+      org.opencontainers.image.source="https://github.com/chatchawan90/e2e-rag-demo"
 ENV PYTHONUNBUFFERED=1 PIP_NO_CACHE_DIR=1 \
     ENVSEARCH_PUBLIC_DEMO=1 ENVSEARCH_EMBEDDING_BACKEND=onnx \
     ENVSEARCH_HOME=/app/deploy/demo-data HF_HOME=/opt/models \
@@ -7,7 +11,7 @@ ENV PYTHONUNBUFFERED=1 PIP_NO_CACHE_DIR=1 \
 WORKDIR /app
 RUN apt-get update && apt-get install -y --no-install-recommends nginx libgomp1 \
     && rm -rf /var/lib/apt/lists/*
-COPY pyproject.toml README.md ./
+COPY pyproject.toml README.md COPYRIGHT ./
 COPY src ./src
 COPY corpus ./corpus
 COPY evals/questions.yaml ./evals/questions.yaml

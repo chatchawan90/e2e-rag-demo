@@ -16,6 +16,7 @@ from typing import Literal
 
 from mcp.server.fastmcp import FastMCP
 
+from . import OWNER_NOTICE
 from .answer import answer as run_answer
 from .config import get_client, get_settings
 from .index import Index
@@ -23,7 +24,7 @@ from .index import Index
 logging.basicConfig(stream=sys.stderr, level=logging.INFO)
 log = logging.getLogger("envsearch.mcp")
 
-mcp = FastMCP("envsearch")
+mcp = FastMCP("envsearch", instructions=OWNER_NOTICE + ". Search environmental regulations and cite the original sources.")
 
 
 @lru_cache(maxsize=2)

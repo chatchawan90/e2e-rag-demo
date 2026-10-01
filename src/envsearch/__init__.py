@@ -1,2 +1,6 @@
 """envsearch — cited Q&A over public environmental regulations (EN + TH)."""
 __version__ = "0.1.0"
+__author__ = "Chatchawan Lakkhananukun"
+__owner__ = "Chatchawan Lakkhananukun"
+OWNER_NOTICE = f"Envsearch · Owned by {__owner__}"
+COPYRIGHT_NOTICE = f"Copyright © 2026 {__owner__}"
