@@ -4,7 +4,7 @@ services:
     runtime: docker
     plan: free
     healthCheckPath: /healthz
-    autoDeployTrigger: off
+    autoDeployTrigger: "off"
     envVars:
       - key: ENVSEARCH_PUBLIC_DEMO
         value: "1"
