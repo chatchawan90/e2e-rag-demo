@@ -1,0 +1,134 @@
+{
+ "epa-saa": {
+  "id": "epa-saa",
+  "title": "EPA Generator Compendium Vol. 1 — Satellite Accumulation Areas",
+  "url": "https://www.epa.gov/sites/default/files/2021-03/documents/generator_compendium_saas.pdf",
+  "lang": "en",
+  "jurisdiction": "US",
+  "title_en": null,
+  "path": null,
+  "metadata": {
+   "topic": "hazardous-waste"
+  }
+ },
+ "epa-vsqg": {
+  "id": "epa-vsqg",
+  "title": "EPA Generator Compendium Vol. 7 — Very Small Quantity Generator Requirements",
+  "url": "https://www.epa.gov/system/files/documents/2021-10/compendium_very-small-quantity-generators.pdf",
+  "lang": "en",
+  "jurisdiction": "US",
+  "title_en": null,
+  "path": null,
+  "metadata": {
+   "topic": "hazardous-waste"
+  }
+ },
+ "epa-recordkeeping": {
+  "id": "epa-recordkeeping",
+  "title": "EPA Generator Compendium Vol. 8 — Recordkeeping and Reporting (SQG/LQG)",
+  "url": "https://www.epa.gov/system/files/documents/2021-10/compendium_generator-recordkeeping-and-reporting.pdf",
+  "lang": "en",
+  "jurisdiction": "US",
+  "title_en": null,
+  "path": null,
+  "metadata": {
+   "topic": "hazardous-waste"
+  }
+ },
+ "epa-universal-waste": {
+  "id": "epa-universal-waste",
+  "title": "EPA Generator Compendium Vol. 10 — Universal Waste",
+  "url": "https://www.epa.gov/system/files/documents/2021-10/compendium_universal-waste.pdf",
+  "lang": "en",
+  "jurisdiction": "US",
+  "title_en": null,
+  "path": null,
+  "metadata": {
+   "topic": "hazardous-waste"
+  }
+ },
+ "epa-empty-containers": {
+  "id": "epa-empty-containers",
+  "title": "EPA Generator Compendium Vol. 11 — Empty Containers",
+  "url": "https://www.epa.gov/system/files/documents/2021-10/compendium_empty-containers.pdf",
+  "lang": "en",
+  "jurisdiction": "US",
+  "title_en": null,
+  "path": null,
+  "metadata": {
+   "topic": "hazardous-waste"
+  }
+ },
+ "epa-spills": {
+  "id": "epa-spills",
+  "title": "EPA Generator Compendium Vol. 15 — Spills and Releases of Hazardous Waste",
+  "url": "https://www.epa.gov/system/files/documents/2022-01/generator_compendium_spills_and_releases_of_hazardous_waste.pdf",
+  "lang": "en",
+  "jurisdiction": "US",
+  "title_en": null,
+  "path": null,
+  "metadata": {
+   "topic": "hazardous-waste"
+  }
+ },
+ "epa-counting": {
+  "id": "epa-counting",
+  "title": "EPA Generator Compendium Vol. 16 — Counting Hazardous Waste and Generator Categories",
+  "url": "https://www.epa.gov/system/files/documents/2022-01/generator_compendium_counting_hw_and_generator_categories.pdf",
+  "lang": "en",
+  "jurisdiction": "US",
+  "title_en": null,
+  "path": null,
+  "metadata": {
+   "topic": "hazardous-waste"
+  }
+ },
+ "epa-hw-characteristics": {
+  "id": "epa-hw-characteristics",
+  "title": "EPA — Hazardous Waste Characteristics: A User-Friendly Reference Document",
+  "url": "https://www.epa.gov/sites/default/files/2016-01/documents/hw-char.pdf",
+  "lang": "en",
+  "jurisdiction": "US",
+  "title_en": null,
+  "path": null,
+  "metadata": {
+   "topic": "hazardous-waste"
+  }
+ },
+ "th-diw-waste-2566": {
+  "id": "th-diw-waste-2566",
+  "title": "ประกาศกระทรวงอุตสาหกรรม เรื่อง การจัดการสิ่งปฏิกูลหรือวัสดุที่ไม่ใช้แล้ว พ.ศ. 2566",
+  "url": "https://songkhla.industry.go.th/web-upload/76x8df0209758a3bec461182a56ea500853/202306/m_news/17747/283469/file_download/04c5387fd556d29979a546002708ca34.pdf",
+  "lang": "th",
+  "jurisdiction": "TH",
+  "title_en": "Ministry of Industry Notification on Management of Industrial Waste, B.E. 2566 (2023)",
+  "path": null,
+  "metadata": {
+   "topic": "industrial-waste"
+  }
+ },
+ "th-moi-effluent-2560": {
+  "id": "th-moi-effluent-2560",
+  "title": "ประกาศกระทรวงอุตสาหกรรม เรื่อง กำหนดมาตรฐานควบคุมการระบายน้ำทิ้งจากโรงงาน พ.ศ. 2560",
+  "url": "https://e-report.diw.go.th/uploads/standardInfo/202310111.pdf",
+  "lang": "th",
+  "jurisdiction": "TH",
+  "title_en": "Ministry of Industry Notification on Factory Effluent Standards, B.E. 2560 (2017)",
+  "path": null,
+  "metadata": {
+   "topic": "effluent"
+  }
+ },
+ "th-mnre-effluent-2559": {
+  "id": "th-mnre-effluent-2559",
+  "title": "ประกาศกระทรวงทรัพยากรธรรมชาติและสิ่งแวดล้อม เรื่อง กำหนดมาตรฐานควบคุมการระบายน้ำทิ้งจากโรงงานอุตสาหกรรม นิคมอุตสาหกรรม และเขตประกอบการอุตสาหกรรม",
+  "url": "https://www.pcd.go.th/wp-content/uploads/2020/05/pcdnew-2020-05-20_03-06-17_069400.pdf",
+  "lang": "th",
+  "jurisdiction": "TH",
+  "title_en": "MNRE Notification on Effluent Standards for Factories, Industrial Estates and Industrial Zones (2016)",
+  "path": null,
+  "metadata": {
+   "topic": "effluent"
+  }
+ }
+}

@@ -1,0 +1,161 @@
+# Seed evaluation set (24 items).
+#
+# Gold facts were written from the regulations as generally known, NOT copied from the
+# downloaded PDFs (the build machine couldn't reach the sites). Before you trust any score:
+#
+#     envsearch eval verify
+#
+# which checks every must_include keyword literally appears in a gold document. Fix or add
+# alternatives for anything it flags, then grow the set with `envsearch eval draft` + review.
+#
+# Tags: en / th = question language; xl = cross-lingual (question language != source language);
+#       us / th-reg = jurisdiction; neg = unanswerable from this corpus; trap = tempts a wrong answer.
+
+items:
+  # ------------------------------------------------------------------ English -> US EPA
+  - id: saa-volume
+    question: How much non-acute hazardous waste can be accumulated in a satellite accumulation area?
+    gold_docs: [epa-saa]
+    must_include: [["55"], ["gallon"]]
+    tags: [en, us, threshold]
+
+  - id: saa-acute
+    question: What is the satellite accumulation area limit for acute hazardous waste?
+    gold_docs: [epa-saa]
+    must_include: [["1 quart", "one quart"]]
+    tags: [en, us, threshold]
+
+  - id: vsqg-monthly
+    question: What monthly amount of hazardous waste makes a site a very small quantity generator?
+    gold_docs: [epa-vsqg, epa-counting]
+    must_include: [["100 kilograms", "100 kg"]]
+    tags: [en, us, threshold]
+
+  - id: vsqg-accumulation
+    question: How much hazardous waste can a VSQG accumulate on site at any one time?
+    gold_docs: [epa-vsqg, epa-counting]
+    must_include: [["1000 kilograms", "1000 kg"]]
+    tags: [en, us, threshold]
+
+  - id: lqg-threshold
+    question: At what monthly generation rate does a facility become a large quantity generator?
+    gold_docs: [epa-counting, epa-vsqg]
+    must_include: [["1000 kilograms", "1000 kg"]]
+    tags: [en, us, threshold]
+
+  - id: empty-container
+    question: When is a container that held hazardous waste considered RCRA-empty?
+    gold_docs: [epa-empty-containers]
+    must_include: [["2.5 centimeters", "2.5 cm", "one inch", "1 inch"], ["3 percent", "3%"]]
+    tags: [en, us, definition]
+
+  - id: ignitable-flashpoint
+    question: What flash point makes a liquid waste exhibit the ignitability characteristic?
+    gold_docs: [epa-hw-characteristics]
+    must_include: [["60", "140"]]
+    tags: [en, us, threshold]
+
+  - id: corrosive-ph
+    question: What pH values make an aqueous waste corrosive?
+    gold_docs: [epa-hw-characteristics]
+    must_include: [["12.5"], ["2"]]
+    tags: [en, us, threshold]
+
+  - id: manifest-retention
+    question: How long must a generator keep signed copies of hazardous waste manifests?
+    gold_docs: [epa-recordkeeping]
+    must_include: [["three years", "3 years"]]
+    tags: [en, us, recordkeeping]
+
+  - id: biennial-report
+    question: When is the biennial hazardous waste report due for large quantity generators?
+    gold_docs: [epa-recordkeeping]
+    must_include: [["march 1"]]
+    tags: [en, us, recordkeeping]
+
+  - id: universal-waste-types
+    question: Which categories of waste can be managed under the universal waste rules?
+    gold_docs: [epa-universal-waste]
+    must_include: [["batter"], ["lamp"], ["pesticide"]]
+    tags: [en, us, definition]
+
+  # ------------------------------------------------------------------ Thai -> Thai regulations
+  - id: th-bod
+    question: ค่าบีโอดีในน้ำทิ้งจากโรงงานต้องไม่เกินเท่าไร
+    gold_docs: [th-moi-effluent-2560, th-mnre-effluent-2559]
+    must_include: [["20"], ["มิลลิกรัมต่อลิตร", "มก./ล.", "mg/l"]]
+    tags: [th, th-reg, threshold]
+
+  - id: th-ph
+    question: ความเป็นกรดและด่าง (pH) ของน้ำทิ้งจากโรงงานต้องอยู่ในช่วงใด
+    gold_docs: [th-moi-effluent-2560, th-mnre-effluent-2559]
+    must_include: [["5.5"], ["9"]]
+    tags: [th, th-reg, threshold]
+
+  - id: th-waste-effective
+    question: ประกาศกระทรวงอุตสาหกรรม เรื่อง การจัดการสิ่งปฏิกูลหรือวัสดุที่ไม่ใช้แล้ว พ.ศ. 2566 มีผลใช้บังคับเมื่อใด
+    gold_docs: [th-diw-waste-2566]
+    must_include: [["1 พฤศจิกายน"], ["2566"]]
+    tags: [th, th-reg, dates]
+
+  - id: th-waste-early-clauses
+    question: ข้อใดของประกาศการจัดการสิ่งปฏิกูลหรือวัสดุที่ไม่ใช้แล้ว พ.ศ. 2566 มีผลใช้บังคับก่อนวันที่ 1 พฤศจิกายน 2566
+    gold_docs: [th-diw-waste-2566]
+    must_include: [["13"], ["22"]]
+    tags: [th, th-reg, dates]
+
+  # ------------------------------------------------------------------ cross-lingual
+  - id: xl-en-bod
+    question: What is the maximum BOD allowed in factory wastewater discharge in Thailand?
+    gold_docs: [th-moi-effluent-2560, th-mnre-effluent-2559]
+    must_include: [["20"], ["mg/l", "milligrams per liter", "milligrams per litre"]]
+    tags: [en, xl, th-reg, threshold]
+
+  - id: xl-en-waste-effective
+    question: When did Thailand's 2023 Ministry of Industry notification on industrial waste management take effect?
+    gold_docs: [th-diw-waste-2566]
+    must_include: [["november 1", "1 november"], ["2023", "2566"]]
+    tags: [en, xl, th-reg, dates]
+
+  - id: xl-en-ph
+    question: What pH range must Thai factory effluent stay within?
+    gold_docs: [th-moi-effluent-2560, th-mnre-effluent-2559]
+    must_include: [["5.5"], ["9"]]
+    tags: [en, xl, th-reg, threshold]
+
+  - id: xl-th-saa
+    question: ตามแนวทางของ US EPA พื้นที่สะสมของเสียอันตรายชั่วคราว (satellite accumulation area) สะสมของเสียได้ไม่เกินกี่แกลลอน
+    gold_docs: [epa-saa]
+    must_include: [["55"]]
+    tags: [th, xl, us, threshold]
+
+  - id: xl-th-corrosive
+    question: ตามเกณฑ์ของ US EPA ของเสียที่มีค่า pH เท่าใดจึงถือว่ามีสมบัติกัดกร่อน
+    gold_docs: [epa-hw-characteristics]
+    must_include: [["12.5"], ["2"]]
+    tags: [th, xl, us, threshold]
+
+  # ------------------------------------------------------------------ unanswerable: should refuse
+  - id: neg-pm25
+    question: What is Thailand's 24-hour average PM2.5 ambient air quality standard?
+    answerable: false
+    tags: [en, neg]
+
+  - id: neg-reach
+    question: What is the EU REACH registration requirement for substances imported above 1 tonne per year?
+    answerable: false
+    tags: [en, neg]
+
+  - id: neg-th-hazmat-fine
+    question: โทษปรับสูงสุดตามพระราชบัญญัติวัตถุอันตรายสำหรับการครอบครองวัตถุอันตรายชนิดที่ 3 โดยไม่ได้รับอนุญาตคือเท่าไร
+    answerable: false
+    tags: [th, neg]
+
+  - id: trap-jurisdiction
+    question: Under Thai law, is a satellite accumulation area limited to 55 gallons?
+    answerable: false
+    notes: >
+      Hard case. The corpus has the US 55-gallon rule but no Thai equivalent. A good answer says
+      the Thai documents don't cover it and flags that 55 gallons is a US EPA rule. Scored as a
+      refusal, so an answer that leads with the US rule without the not-found line counts as a fail.
+    tags: [en, neg, trap]

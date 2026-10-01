@@ -1,0 +1,15 @@
+*
+!pyproject.toml
+!README.md
+!src/
+!src/**
+!corpus/
+!corpus/manifest.yaml
+!evals/
+!evals/questions.yaml
+!deploy/
+!deploy/**
+**/__pycache__
+**/*.pyc
+**/*.lock
+**/*.egg-info

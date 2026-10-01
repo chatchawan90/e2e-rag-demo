@@ -1,0 +1,87 @@
+# Corpus manifest. Each entry is downloaded by `envsearch fetch` into data/raw/<id>.<ext>.
+# doc_id is stable: eval gold labels and citations refer to it, so never rename one casually.
+# Add documents freely; run `envsearch fetch && envsearch build` afterwards.
+
+documents:
+  # ---------------- US EPA: RCRA hazardous waste generator guidance (English) ----------------
+  - id: epa-saa
+    title: "EPA Generator Compendium Vol. 1 — Satellite Accumulation Areas"
+    lang: en
+    jurisdiction: US
+    metadata: {topic: hazardous-waste}
+    url: https://www.epa.gov/sites/default/files/2021-03/documents/generator_compendium_saas.pdf
+
+  - id: epa-vsqg
+    title: "EPA Generator Compendium Vol. 7 — Very Small Quantity Generator Requirements"
+    lang: en
+    jurisdiction: US
+    metadata: {topic: hazardous-waste}
+    url: https://www.epa.gov/system/files/documents/2021-10/compendium_very-small-quantity-generators.pdf
+
+  - id: epa-recordkeeping
+    title: "EPA Generator Compendium Vol. 8 — Recordkeeping and Reporting (SQG/LQG)"
+    lang: en
+    jurisdiction: US
+    metadata: {topic: hazardous-waste}
+    url: https://www.epa.gov/system/files/documents/2021-10/compendium_generator-recordkeeping-and-reporting.pdf
+
+  - id: epa-universal-waste
+    title: "EPA Generator Compendium Vol. 10 — Universal Waste"
+    lang: en
+    jurisdiction: US
+    metadata: {topic: hazardous-waste}
+    url: https://www.epa.gov/system/files/documents/2021-10/compendium_universal-waste.pdf
+
+  - id: epa-empty-containers
+    title: "EPA Generator Compendium Vol. 11 — Empty Containers"
+    lang: en
+    jurisdiction: US
+    metadata: {topic: hazardous-waste}
+    url: https://www.epa.gov/system/files/documents/2021-10/compendium_empty-containers.pdf
+
+  - id: epa-spills
+    title: "EPA Generator Compendium Vol. 15 — Spills and Releases of Hazardous Waste"
+    lang: en
+    jurisdiction: US
+    metadata: {topic: hazardous-waste}
+    url: https://www.epa.gov/system/files/documents/2022-01/generator_compendium_spills_and_releases_of_hazardous_waste.pdf
+
+  - id: epa-counting
+    title: "EPA Generator Compendium Vol. 16 — Counting Hazardous Waste and Generator Categories"
+    lang: en
+    jurisdiction: US
+    metadata: {topic: hazardous-waste}
+    url: https://www.epa.gov/system/files/documents/2022-01/generator_compendium_counting_hw_and_generator_categories.pdf
+
+  - id: epa-hw-characteristics
+    title: "EPA — Hazardous Waste Characteristics: A User-Friendly Reference Document"
+    lang: en
+    jurisdiction: US
+    metadata: {topic: hazardous-waste}
+    url: https://www.epa.gov/sites/default/files/2016-01/documents/hw-char.pdf
+
+  # ---------------- Thailand: industrial waste and effluent (Thai) ----------------
+  - id: th-diw-waste-2566
+    title: "ประกาศกระทรวงอุตสาหกรรม เรื่อง การจัดการสิ่งปฏิกูลหรือวัสดุที่ไม่ใช้แล้ว พ.ศ. 2566"
+    title_en: "Ministry of Industry Notification on Management of Industrial Waste, B.E. 2566 (2023)"
+    lang: th
+    jurisdiction: TH
+    metadata: {topic: industrial-waste}
+    # Mirror hosted by the Songkhla Provincial Industry Office (full text).
+    url: https://songkhla.industry.go.th/web-upload/76x8df0209758a3bec461182a56ea500853/202306/m_news/17747/283469/file_download/04c5387fd556d29979a546002708ca34.pdf
+
+  - id: th-moi-effluent-2560
+    title: "ประกาศกระทรวงอุตสาหกรรม เรื่อง กำหนดมาตรฐานควบคุมการระบายน้ำทิ้งจากโรงงาน พ.ศ. 2560"
+    title_en: "Ministry of Industry Notification on Factory Effluent Standards, B.E. 2560 (2017)"
+    lang: th
+    jurisdiction: TH
+    metadata: {topic: effluent}
+    url: https://e-report.diw.go.th/uploads/standardInfo/202310111.pdf
+
+  - id: th-mnre-effluent-2559
+    title: "ประกาศกระทรวงทรัพยากรธรรมชาติและสิ่งแวดล้อม เรื่อง กำหนดมาตรฐานควบคุมการระบายน้ำทิ้งจากโรงงานอุตสาหกรรม นิคมอุตสาหกรรม และเขตประกอบการอุตสาหกรรม"
+    title_en: "MNRE Notification on Effluent Standards for Factories, Industrial Estates and Industrial Zones (2016)"
+    lang: th
+    jurisdiction: TH
+    metadata: {topic: effluent}
+    url: https://www.pcd.go.th/wp-content/uploads/2020/05/pcdnew-2020-05-20_03-06-17_069400.pdf

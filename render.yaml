@@ -1,0 +1,12 @@
+services:
+  - type: web
+    name: envsearch-demo
+    runtime: docker
+    plan: free
+    healthCheckPath: /healthz
+    autoDeployTrigger: off
+    envVars:
+      - key: ENVSEARCH_PUBLIC_DEMO
+        value: "1"
+      - key: ENVSEARCH_EMBEDDING_BACKEND
+        value: onnx

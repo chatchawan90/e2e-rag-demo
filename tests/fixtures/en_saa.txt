@@ -1,0 +1,6 @@
+SYNTHETIC TEST FIXTURE - Satellite Accumulation Areas
+A generator may accumulate up to 55 gallons of non-acute hazardous waste
+in containers at or near the point of generation.
+For acute hazardous waste the limit is one quart of liquid or 1 kg of solid.
+Page two covers labeling.
+Containers must be marked with the words Hazardous Waste and an indication of the hazards.

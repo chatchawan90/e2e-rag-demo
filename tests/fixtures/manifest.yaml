@@ -1,0 +1,4 @@
+documents:
+  - {id: fx-saa, title: "Fixture SAA", lang: en, jurisdiction: US, url: "https://example.org/saa.pdf", path: en_saa.txt}
+  - {id: fx-cat, title: "Fixture Categories", lang: en, jurisdiction: US, url: "https://example.org/cat.pdf", path: en_categories.txt}
+  - {id: fx-th-eff, title: "ฟิกซ์เจอร์ มาตรฐานน้ำทิ้ง", lang: th, jurisdiction: TH, url: "https://example.org/th.pdf", path: th_effluent.txt}
